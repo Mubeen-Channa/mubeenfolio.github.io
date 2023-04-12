@@ -1,0 +1,87 @@
+.slider{
+  max-width: 100%;
+  /* The position of the element is set relative to its original position: */
+  position: relative;
+  /* Center horizontally: */
+  margin: auto;
+  height: 400px;
+}
+
+h2
+{
+  text-align: center;
+  margin-top: 50px;
+  color: rgb(0, 0, 56);
+  font-family: 'Montserrat';
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  font-size: 25px;
+}
+
+span
+{
+  color: #dfdc3f;
+}
+
+h3
+{
+  text-align: center;
+  font-size: 17px;
+  margin: 0px 200px 0px 200px;
+  color: rgb(0, 0, 56);
+  font-family: calibri;
+  font-weight: lighter;
+}
+
+/* The picture is scaled in relation to the parent element: */
+.slider .item img {
+  /* The element is resized to fill the block and maintain proportions: */
+  object-fit: cover;
+  width: 70%;
+  height: 420px;
+  margin-left: 15%;
+  margin-top: 3%;
+}
+/* Back and forward buttons: */
+.slider .previous, .slider .next {
+  /* Adds an icon to the cursor when it is over the button: */
+  cursor: pointer;
+  /* The position of the element is set relative to the borders of the browser: */
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  /* Styling the buttons themselves: */
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  /* Background fading on hover: */
+  transition: 0.6s ease;
+  /* Rounding the borders: */
+  border-radius: 0 3px 3px 0;
+}
+.slider .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  color: black;
+}
+/* When you hover over the buttons, add the background of the buttons: */
+.slider .previous:hover,
+.slider .next:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/* Slide animation: */
+.slider .item {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  /* Set and change the transparency: */
+  from {
+      opacity: 0.4
+  }
+  to {
+      opacity: 1
+  }
+}
